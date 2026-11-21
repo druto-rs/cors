@@ -1,0 +1,20 @@
+[package]
+name = "druto-cors"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.95"
+description = "Cross-Origin Resource Sharing (CORS) preflight and response header middleware for Druto"
+repository = "https://github.com/druto-rs/cors"
+readme = "README.md"
+keywords = ["cors", "http", "druto", "middleware", "w3c"]
+categories = ["web-programming::http-server"]
+
+[dependencies]
+dhap = { git = "https://github.com/Hitarashi/dhap.git", branch = "main" }
+regex = { version = "1.13.2", default-features = false, features = ["std", "perf"] }
+router = { package = "druto-router", git = "https://github.com/druto-rs/router.git", branch = "main" }
+
+[dev-dependencies]
+proptest = "1.12.0"
+serde_json = "1.0.154"
